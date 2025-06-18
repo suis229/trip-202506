@@ -1,0 +1,13 @@
+{
+    "name": "旅のしおり 2025",
+    "short_name": "旅しおり",
+    "start_url": "./",
+    "display": "standalone",
+    "theme_color": "#4C9AFF",
+    "background_color": "#FFF9F6",
+    "icons": [
+      { "src": "icons/東京ビッグサイト.jpg", "sizes": "192x192", "type": "image/png" },
+      { "src": "icons/東京ビッグサイト.jpg", "sizes": "512x512", "type": "image/png" }
+    ]
+  }
+  
