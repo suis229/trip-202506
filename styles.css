@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+/* ---- 全体 ---- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fafafa;
+  padding-bottom: 4rem;
+}
+a { color: #0077cc; text-decoration: none; }
+
+/* ---- 見出し ---- */
+h1, h2, h3 { font-weight: 700; }
+h1 { font-size: 2rem; margin-bottom: .5rem; }
+h2 { font-size: 1.5rem; margin: 2rem 0 1rem; }
+h3 { font-size: 1.25rem; margin: 1.5rem 0 .5rem; }
+p.lead { margin: 1rem 0 2rem; font-size: 1.1rem; color: #555; }
+
+/* ---- ヘッダー & ナビ ---- */
+header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+  position: sticky; top: 0; z-index: 10;
+}
+nav {
+  display: flex; justify-content: center; gap: 1.5rem;
+  padding: 1rem; flex-wrap: wrap;
+  max-width: 960px; margin: auto;
+}
+nav a { font-weight: 700; position: relative; }
+nav a::after {
+  content: ''; position: absolute; left: 0; bottom: -4px;
+  width: 0; height: 2px; background: #0077cc; transition: width .3s;
+}
+nav a:hover::after { width: 100%; }
+
+/* ---- メインレイアウト ---- */
+main {
+  max-width: 960px; margin: auto;
+  background: #fff; padding: 2rem 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,.04);
+}
+section { page-break-before: always; }
+section:first-of-type { page-break-before: avoid; }
+
+/* ---- テーブル ---- */
+table { width: 100%; border-collapse: collapse; margin-top: .8rem; }
+th, td { border: 1px solid #ddd; padding: .5rem .6rem; text-align: left; }
+th { background: #f0f5ff; font-weight: 700; }
+
+/* ---- 画像 / 図版 ---- */
+figure { margin: 1rem 0; text-align: center; }
+figure img {
+  max-width: 100%; height: auto;
+  border-radius: .4rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,.08);
+}
+figcaption { font-size: .9rem; color: #666; margin-top: .4rem; }
+
+/* ---- チェックリスト ---- */
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: .4rem .8rem;
+  margin-top: .8rem;
+}
+.checklist label { display: flex; gap: .5rem; align-items: center; }
+.checklist input[type="checkbox"] {
+  accent-color: #0077cc;
+  transform: scale(1.2);
+}
+
+/* ---- 印刷用調整 ---- */
+@media print {
+  header, nav { display: none; }
+  body { background: transparent; }
+  main { box-shadow: none; }
+}

@@ -5,159 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>旅のしおり｜2025.6.20 - 6.22</title>
 
+  <!-- PWA -->
   <link rel="manifest" href="manifest.json">
 
-  <style>
-    /* ---------- Base ---------- */
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #fafafa;
-      padding-bottom: 4rem;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    h1, h2, h3 {
-      font-weight: 700;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: .5rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin: 2rem 0 1rem;
-    }
-    h3 {
-      font-size: 1.25rem;
-      margin: 1.5rem 0 .5rem;
-    }
-    p.lead {
-      margin: 1rem 0 2rem;
-      font-size: 1.1rem;
-      color: #555;
-    }
-    /* ---------- Layout ---------- */
-    header {
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-      flex-wrap: wrap;
-      max-width: 960px;
-      margin: auto;
-    }
-    nav a {
-      font-weight: 700;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background: #0077cc;
-      transition: width .3s;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
-    main {
-      max-width: 960px;
-      margin: auto;
-      background: #fff;
-      padding: 2rem 1.2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,.04);
-    }
-    section {
-      page-break-before: always; /* 1 日 = 1 ページ印刷 */
-    }
-    section:first-of-type {
-      page-break-before: avoid; /* 表紙は改ページしない */
-    }
-    /* ---------- Tables ---------- */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: .8rem;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: .5rem .6rem;
-      text-align: left;
-    }
-    th {
-      background: #f0f5ff;
-      font-weight: 700;
-    }
-    /* ---------- Map & Img placeholder ---------- */
-    figure {
-      margin: 1rem 0;
-      text-align: center;
-    }
-    figure img {
-      max-width: 100%;
-      height: auto;
-      border-radius: .4rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,.08);
-    }
-    figcaption {
-      font-size: .9rem;
-      color: #666;
-      margin-top: .4rem;
-    }
-    /* ---------- Checklist ---------- */
-    .checklist {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: .4rem .8rem;
-      margin-top: .8rem;
-    }
-    .checklist label {
-      display: flex;
-      gap: .5rem;
-      align-items: center;
-    }
-    .checklist input[type="checkbox"] {
-      accent-color: #0077cc;
-      transform: scale(1.2);
-    }
-    /* ---------- Print tweaks ---------- */
-    @media print {
-      header, nav {
-        display: none;
-      }
-      body {
-        background: transparent;
-      }
-      main {
-        box-shadow: none;
-      }
-    }
-  </style>
+  <!-- 外部スタイルシート -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <nav>
-      <a href="#cover">表紙</a>
+      <a href="#cover">Top</a>
       <a href="#day-20">6/20</a>
       <a href="#day-21">6/21</a>
       <a href="#day-22">6/22</a>
@@ -168,43 +26,60 @@
   <main>
     <!-- 表紙 -->
     <section id="cover">
+      <br></br>
       <h1>🌸 旅のしおり</h1>
       <p class="lead">2025 年 6 月 20 日 (金) 〜 6 月 22 日 (日)</p>
-      <p>関東遠征メンバーのみなさまへ。楽しい 3 日間になるよう、スケジュール・集合場所・持ち物をまとめました。印刷時は 1 日 1 ページで区切られます。</p>
     </section>
 
     <!-- 6/20 -->
     <section id="day-20">
-      <h2>6/20 (Fri) — 出発 Day</h2>
+      <br></br>
+      <h2>6/20&nbsp;(Fri) — 出発&nbsp;Day</h2>
       <h3>🚗 出発スケジュール</h3>
       <table>
-        <thead><tr><th>時間</th><th>内容</th><th>詳細</th></tr></thead>
+        <thead><tr><th>時間</th><th>内容</th><th>配車</th></tr></thead>
         <tbody>
-          <tr><td>21:00</td><td>集合 & 出発</td><td>YM 前集合 → 2 台に分乗</td></tr>
+          <tr><td>21:00</td><td>YM 出発</td><td>★山﨑車 — 花絵・遥輝<br>
+            伊佐車 — 葵・★美咲・史菜</td></tr>
         </tbody>
       </table>
-      <p><strong>車割り</strong><br>
-      ★山﨑車 — 花絵・遥輝<br>
-      伊佐車 — 葵・★美咲・史菜</p>
+      <p>
+        ★ リーダー
+        ☆ 副リーダー
+        <ul>
+            <li>夜行バスは1時間前までに集合場所に到着する</li>
+            <li>到着確認をリーダーと副リーダーで分担して行う</li>
+        </ul>
+      </p>
     </section>
 
     <!-- 6/21 -->
     <section id="day-21">
-      <h2>6/21 (Sat) — 横浜 & 東京</h2>
+      <br></br>
+      <h2>6/21&nbsp;(Sat) — 横浜 & 東京</h2>
       <h3>🗓️ スケジュール</h3>
       <table>
         <thead><tr><th>時間</th><th>内容</th><th>備考</th></tr></thead>
         <tbody>
-          <tr><td>09:30</td><td>横浜中華街集合</td><td>★優華 到着確認</td></tr>
-          <tr><td>10:00</td><td>謎解き＆散策</td><td>グループ自由行動</td></tr>
-          <tr><td>11:30–12:00</td><td>解散 → 観光 / 準備</td><td>-</td></tr>
-          <tr><td>19:00</td><td>夕食集合</td><td>月島もんじゃ 三九上野総本店</td></tr>
+          <tr><td>9:30</td><td>横浜中華街集合</td><td>-</td></tr>
+          <tr><td>10:00~</td><td>謎解き＆散策</td><td>グループ自由行動</td></tr>
+          <tr><td>11:30~12:00</td><td>解散 → 観光 / 準備</td><td>-</td></tr>
+          <tr><td>12:00~</td><td>グループごとに観光</td><td>-</td></tr>
+          <tr><td>19:00</td><td>夕食集合</td><td>月島もんじゃ 三九上野総本店 （花絵、遥輝、美咲、史菜）</td></tr>
           <tr><td>20:30</td><td>ホテルプレール集合</td><td>チェックイン</td></tr>
           <tr><td>22:30</td><td>就寝</td><td>-</td></tr>
           <tr><td>22:00</td><td>夜行バス 🚌 金沢駅 発</td><td>★優華・真莉・結香・美実・☆野村・竹川・汐音</td></tr>
-          <tr><td>06:24 (22 日)</td><td>バスタ新宿 着</td><td>上記メンバー</td></tr>
+          <tr><td>6:24 (22 日)</td><td>バスタ新宿 着</td><td>上記メンバー</td></tr>
         </tbody>
       </table>
+      <p>
+        ★ リーダー
+        ☆ 副リーダー
+        <ul>
+            <li>夜行バスは1時間前までに集合場所に到着する</li>
+            <li>到着確認をリーダーと副リーダーで分担して行う</li>
+        </ul>
+      </p>
 
       <h3>📍 住所リスト</h3>
       <ul>
@@ -216,37 +91,52 @@
 
     <!-- 6/22 -->
     <section id="day-22">
-      <h2>6/22 (Sun) — Comic Event @ 東京ビッグサイト</h2>
+      <br></br>
+      <h2>6/22&nbsp;(Sun) — Comic Event&nbsp;@ 東京ビッグサイト</h2>
       <h3>🗓️ スケジュール</h3>
       <table>
         <thead><tr><th>時間</th><th>内容</th><th>備考</th></tr></thead>
         <tbody>
-          <tr><td>08:00</td><td>ホテル出発</td><td>チェックアウト・荷物預け</td></tr>
-          <tr><td>09:30</td><td>東京ビッグサイト集合</td><td>国際展示場正門前</td></tr>
-          <tr><td>10:00</td><td>会場入場 & 席取り</td><td>昼食は事前購入</td></tr>
-          <tr><td>16:30頃</td><td>会場発 → 各自観光 & 夕食</td><td>集合写真忘れずに</td></tr>
+          <tr><td>8:00</td><td>ホテルプレール出発</td><td>-</td></tr>
+          <tr><td>9:30</td><td>東京ビッグサイト集合</td><td>-</td></tr>
+          <tr><td>10:00</td><td>会場入場 & 席確保</td><td>昼食は事前購入分</td></tr>
+          <tr><td>16:30頃</td><td>会場発</td><td>-</td></tr>
+          <tr><td>16:30~</td><td>グループごとに観光 & 夕食</td><td>-</td></tr>
           <tr><td>22:00</td><td>バスタ新宿 発 🚌</td><td>★美咲・史菜</td></tr>
           <tr><td>23:35</td><td>同 発 🚌</td><td>★優華・美実・☆竹川・真莉・結香</td></tr>
         </tbody>
       </table>
+      <p>
+        ★ リーダー
+        ☆ 副リーダー
+        <ul>
+            <li style="color: red;">事前に当日（22日）の昼食を買っておく</li>
+            <li>夜行バスは1時間前までに集合場所に到着する</li>
+            <li>到着確認をリーダーと副リーダーで分担して行う</li>
+        </ul>
+      </p>
 
       <h3>🗺️ マップ & 写真</h3>
       <figure>
-        <img src="https://placehold.jp/1280x720.png?text=Tokyo%20Big%20Sight" alt="東京ビッグサイト外観">
-        <figcaption>東京ビッグサイト（東京都江東区有明3-11-1）</figcaption>
+        <img src="icons/東京ビッグサイト_地図.jpg" alt="東京ビッグサイト外観">
+        <figcaption>東京ビッグサイト周辺図</figcaption>
+        <br></br>
+        <img src="icons/東京ビッグサイト_前回.jpg" alt="東京ビッグサイト外観">
+        <figcaption>東京ビッグサイト（2024）</figcaption>
       </figure>
 
       <h3>👥 班員リスト</h3>
       <table>
-        <thead><tr><th>#</th><th>メンバー</th></tr></thead>
+        <thead><tr><th>メンバー</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td>優華・みみ</td></tr>
-          <tr><td>2</td><td>野村・結香・ひろみ</td></tr>
-          <tr><td>3</td><td>花絵・遥輝・本田晴樹</td></tr>
-          <tr><td>4</td><td>竹川・真莉・汐音</td></tr>
-          <tr><td>5</td><td>葵・史菜・美咲・原口遥</td></tr>
-          <tr><td>6</td><td>山﨑・壮吾・りんた</td></tr>
-          <tr><td colspan="2"><em>サポート: 畑山・品田優作 (弟)・ 伊佐帆南</em></td></tr>
+          <tr><td>優華・みみ</td></tr>
+          <tr><td>野村・結香・ひろみ</td></tr>
+          <tr><td>花絵・遥輝・本田晴樹</td></tr>
+          <tr><td>竹川・真莉・汐音</td></tr>
+          <tr><td>葵・史菜・美咲・原口遥</td></tr>
+          <tr><td>山﨑・壮吾・りんた</td></tr>
+          <tr><td>畑山・品田優作 (弟)</td></tr>
+          <tr><td>伊佐帆南（お手伝い）</td></tr>
         </tbody>
       </table>
     </section>
@@ -270,17 +160,18 @@
         <label><input type="checkbox">ガイドブック・地図</label>
         <label><input type="checkbox">おみやげ用バッグ</label>
       </div>
-      <p style="margin-top:1rem;font-size:.9rem;color:#555;">※ 夜行バスは冷える場合があります。ブランケットがあると快適です。</p>
     </section>
 
   </main>
+
+  <!-- Service Worker 登録 -->
   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js')
-          .catch(err => console.error('SW registration failed:', err));
-      });
-    }
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () =>
+      navigator.serviceWorker.register('./service-worker.js')
+        .catch(err => console.error('SW registration failed:', err))
+    );
+  }
   </script>
 </body>
 </html>
