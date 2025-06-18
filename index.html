@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>旅のしおり｜2025.6.20 - 6.22</title>
+  <title>a旅のしおり｜2025.6.20 - 6.22</title>
 
   <!-- PWA -->
   <link rel="manifest" href="manifest.json">
@@ -166,12 +166,13 @@
 
   <!-- Service Worker 登録 -->
   <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () =>
-      navigator.serviceWorker.register('./service-worker.js')
-        .catch(err => console.error('SW registration failed:', err))
-    );
-  }
-  </script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        // updateViaCache:'none' でリロード時に常に新しい SW を取りに行く
+        navigator.serviceWorker.register('./service-worker.js', { updateViaCache: 'none' })
+          .catch(err => console.error('SW registration failed:', err));
+      });
+    }
+  </script>    
 </body>
 </html>
